@@ -14,7 +14,6 @@ import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.core.view.ViewCompat
-import com.example.one_calc.ui.theme.Typography
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
@@ -39,7 +38,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun CalculatorTheme(
+fun OneCalcTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
@@ -50,6 +49,7 @@ fun CalculatorTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
+
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
